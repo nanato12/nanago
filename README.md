@@ -32,9 +32,15 @@ client, err := nana.Login(mailAddress, password)
 client, err := nana.LoginByToken(token)
 ```
 
-## LoginAccount Information
+## Client Information
 ```go
 fmt.Println("[ID]", client.ID, "[NAME]", client.Name, "[TOKEN]", client.Token)
+```
+
+## Account Information
+```go
+res, err := client.GetMyInfo()
+fmt.Println(res)
 ```
 
 ## Follow User 🙆
@@ -46,12 +52,22 @@ res, err := client.Follow(userID)
 ## Play Post ▶️
 Play post by `PostID`
 ```go
-res, err := client.PlayPost(postID))
+res, err := client.PlayPost(postID)
 ```
 ## Applause Post 👏
 Applause post by `PostID`
 ```go
 res, err := client.ApplausePost(postID)
+```
+## Comment on Post 💬
+Comment on post by `PostID`
+```go
+res, err := client.CommentPost(postID, comment)
+```
+## Join Community 👨‍👨‍👧‍👧
+Join community by `CommunityID`
+```go
+res, err := client.JoinCommunity(communityID)
 ```
 ## Sample
 Create account and follow user.
