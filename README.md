@@ -1,5 +1,5 @@
 # nanago
-Nana Unofficial API
+[Nana](https://nana-music.com/) Unofficial API
 
 ## go get
 ```bash
